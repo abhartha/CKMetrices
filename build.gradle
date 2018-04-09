@@ -1,0 +1,45 @@
+plugins {
+    id 'org.jetbrains.intellij' version '0.3.1'
+}
+
+group 'com.abhrtha'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+task wrapper(type: Wrapper) {
+    gradleVersion = "3.0";
+}
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    extraLibs
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    extraLibs group : 'org.eclipse.jdt', name: 'org.eclipse.jdt.core', version: '3.10.0'
+    extraLibs group: 'org.jfree', name: 'jfreechart', version: '1.0.19'
+    configurations.compile.extendsFrom(configurations.extraLibs)
+}
+
+jar {
+    from {
+        configurations.extraLibs.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+intellij {
+    version '2018.1'
+}
+patchPluginXml {
+    changeNotes """
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>"""
+}

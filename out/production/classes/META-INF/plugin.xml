@@ -1,0 +1,35 @@
+<idea-plugin>
+    <id>com.abhrtha.my-plugin</id>
+    <name>code_quality_plugin</name>
+    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+    <description><![CDATA[
+    Enter short description for your plugin here.<br>
+    <em>most HTML tags may be used</em>
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!--group id="MyPlugin.SampleMenu" text="Greeting" description="Greeting menu">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action id="Myplugin.Textboxes" class="ck.CodeQualityAction" text="Hello" description="Says hello"/>
+        </group-->
+        <action id="MyPlugin.SampleMenu" class="ck.CodeQualityAction" text="CKMetrics..."
+                description="Generates visualization for CK Metrices.">
+            <add-to-group group-id="EditorContextBarMenu" anchor="last"/>
+        </action>
+        <action id="CKMetrices" class="ck.CodeQualityAction" text="CK Metrices"
+                description="Generates a visualization of CK metrices for current class.">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
