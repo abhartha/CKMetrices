@@ -1,7 +1,7 @@
 ## Synopsis
 
-This is CK Metrices calculator plugin for Idea Intellij IDE. 
-After installing this plugin a new option appears with name "CK Metrices" in the EditorPopupMenu.
+This is CK Metrics calculator plugin for Idea Intellij IDE. 
+After installing this plugin a new option appears with name "CK Metrics" in the EditorPopupMenu.
 Just right click from the java file where you want to see these values.
 It will visualize the value of five metrics: 
 LOC, LCOM, WMC, NOM, and CBO
@@ -37,4 +37,6 @@ I have used multiple open source to create this project like following:
 7. https://stackoverflow.com/questions/7799940/jframe-exit-on-close-java#comment9502616_7800013
 8. https://stackoverflow.com/questions/5522575/how-can-i-update-a-jfreecharts-appearance-after-its-been-made-visible
 
+## Liscence
+OpenBSD
 
