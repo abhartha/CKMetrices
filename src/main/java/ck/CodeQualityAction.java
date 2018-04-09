@@ -5,8 +5,6 @@ import com.intellij.openapi.editor.Editor;
 import com.intellij.psi.*;
 import com.intellij.psi.util.PsiTreeUtil;
 
-import org.jfree.ui.RefineryUtilities;
-
 public class CodeQualityAction extends AnAction {
 
     public String path = "";
@@ -22,9 +20,6 @@ public class CodeQualityAction extends AnAction {
         CKReport report = new CK().calculate(path);
 
         CreateChart chart = new CreateChart("CK Quality Metrics", "Metrics for class: " + psiClass.getName(), report, psiClass);
-//        chart.pack();
-//        RefineryUtilities.centerFrameOnScreen(chart);
-//        chart.setVisible( true );
 
         ThreadExecution te = new ThreadExecution(path, chart);
         Thread t1 = new Thread(te);

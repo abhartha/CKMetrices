@@ -24,11 +24,11 @@
             <action id="Myplugin.Textboxes" class="ck.CodeQualityAction" text="Hello" description="Says hello"/>
         </group-->
         <action id="MyPlugin.SampleMenu" class="ck.CodeQualityAction" text="CKMetrics..."
-                description="Generates visualization for CK Metrices.">
+                description="Generates visualization for CK Metrics.">
             <add-to-group group-id="EditorContextBarMenu" anchor="last"/>
         </action>
-        <action id="CKMetrices" class="ck.CodeQualityAction" text="CK Metrices"
-                description="Generates a visualization of CK metrices for current class.">
+        <action id="CKMetrics" class="ck.CodeQualityAction" text="CK Metrics"
+                description="Generates a visualization of CK metrics for current class.">
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>
         </action>
     </actions>
